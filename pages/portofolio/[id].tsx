@@ -11,13 +11,15 @@ import {
   Badge,
   Carousel,
 } from "react-bootstrap";
+// @ts-ignore
 import Layout from "../layout.tsx";
+import { useState } from 'react';
 
 interface portoDetailProps {
   portofolio: Object;
 }
 
-const shimmer = (w, h) => `
+const shimmer = (w:any, h:any) => `
 <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <linearGradient id="g">
@@ -31,28 +33,28 @@ const shimmer = (w, h) => `
   <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
 </svg>`;
 
-const toBase64 = (str) =>
+const toBase64 = (str: any) =>
   typeof window === "undefined"
     ? Buffer.from(str).toString("base64")
     : window.btoa(str);
 
-export default function portoDetail(props) {
+export default function portoDetail(props: portoDetailProps) {
   const { portofolio } = props;
-
+  const [ data, setstate] = useState(portofolio);
   return (
     <Layout pageTitle="Portofolio">
       <Row className="portoDetail">
         <div className="col-lg-6 col-sm-12">
           <Carousel fade interval={3000} variant="dark">
-            {portofolio.photo.map((photo) => (
+            {data.photo.map((p) => (
               <Carousel.Item>
                 <div className="imgWrap">
                   <Image
                     className="image"
                     layout="fill"
                     objectFit="contain"
-                    src={photo.url}
-                    alt={portofolio.title}
+                    src={p.url}
+                    alt={p.title}
                     placeholder="blur"
                     blurDataURL={`data:image/svg+xml;base64,${toBase64(
                       shimmer(700, 475)

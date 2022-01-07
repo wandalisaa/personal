@@ -18,6 +18,7 @@ import {
   Badge,
 } from "react-bootstrap";
 // component
+// @ts-ignore
 import Layout from "./layout.tsx";
 import Head from "next/head";
 

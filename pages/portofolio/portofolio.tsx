@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { prototype } from "module";
 import { porto } from "../../data/porto";
+// @ts-ignore
 import Layout from "../layout.tsx";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useState } from "react";
@@ -11,7 +12,7 @@ import { useState } from "react";
 /* eslint-disable linebreak-style */
 
 // effect shimmer for image loading
-const shimmer = (w, h) => `
+const shimmer = (w: any, h: any) => `
 <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <linearGradient id="g">
@@ -25,7 +26,7 @@ const shimmer = (w, h) => `
   <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
 </svg>`;
 
-const toBase64 = (str) =>
+const toBase64 = (str: any) =>
   typeof window === "undefined"
     ? Buffer.from(str).toString("base64")
     : window.btoa(str);
@@ -41,10 +42,15 @@ export async function getStaticProps() {
   };
 }
 
-export default function portofolio(props) {
+interface portoProps{
+  dataPortofolio: [];
+}
+
+export default function portofolio(props: portoProps) {
   const route = useRouter();
   const { dataPortofolio } = props;
-  const [posts, setPosts] = useState(dataPortofolio);
+  const [ data, setstate] = useState(dataPortofolio as any[]);
+  const [posts, setPosts] = useState(data);
   const [hasMore, setHasMore] = useState(true);
 
   const getMorePost = async () => {

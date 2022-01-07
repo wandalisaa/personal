@@ -1,16 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { portofolio } from '../../../data/porto';
 
-type Data = {
-    id: string;
-    title: string;
-    type: string;
-    photo: string;
-    event: string;
-    desc: string;
-  };
 
-export default function portofolioHandler({ query: { id } }, res: NextApiResponse<Data>) {
+export default function portofolioHandler({ query: { id } }: { query: {id: string}}, res: NextApiResponse) {
   const filtered = portofolio.filter((p) => p.id === id);
 
   // Portofolio with id exists

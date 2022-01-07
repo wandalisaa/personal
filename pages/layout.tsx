@@ -6,28 +6,35 @@ import {
   Row,
   Button,
   Card,
-} from "react-bootstrap";
-import Image from "next/image";
-import Header from "./header.tsx";
-import Footer from "./footer.tsx";
-import styles from "../styles/Home.module.css";
-import me from "../styles/asset/me.png";
-import dribbble from "../styles/asset/dribbble.png";
-import github from "../styles/asset/github.png";
-import linkedin from "../styles/asset/linkedin.png";
-import Head from "next/head";
+} from 'react-bootstrap';
+import Image from 'next/image';
+import Head from 'next/head';
+import { ReactNode } from 'react';
+// @ts-ignore
+import Header from './header.tsx';
+// @ts-ignore
+import Footer from './footer.tsx';
+import styles from '../styles/Home.module.css';
+import me from '../styles/asset/me.png';
+import dribbble from '../styles/asset/dribbble.png';
+import github from '../styles/asset/github.png';
+import linkedin from '../styles/asset/linkedin.png';
 
 interface LayoutProps {
-  children: ReactNode;
+  children : ReactNode;
   pageTitle: string;
 }
 
-export default function layout(props) {
+export default function layout(props: LayoutProps) {
   const { children, pageTitle } = props;
   return (
     <>
       <Head>
-        <title>WandaWorld | {pageTitle}</title>
+        <title>
+          WandaWorld |
+          {' '}
+          {pageTitle}
+        </title>
       </Head>
       <Container className="text-white">
         <div className="ellipse1" />
@@ -62,13 +69,13 @@ export default function layout(props) {
               Its my personal website that i build using react js and next js .
             </p>
             <p>See more about me on my social media .</p>
-            <a target="_blank" href="https://www.linkedin.com/in/wanda-khalishah-898138209/" className="icon">
+            <a target="_blank" href="https://www.linkedin.com/in/wanda-khalishah-898138209/" className="icon" rel="noreferrer">
               <Image alt="LinkedIn" src={linkedin} width={30} height={30} />
             </a>
-            <a target="_blank" href="https://github.com/wandalisaa" className="icon">
+            <a target="_blank" href="https://github.com/wandalisaa" className="icon" rel="noreferrer">
               <Image alt="Github" src={github} width={30} height={30} />
             </a>
-            <a target="_blank" href="https://dribbble.com/Wanda_Khalishah" className="icon">
+            <a target="_blank" href="https://dribbble.com/Wanda_Khalishah" className="icon" rel="noreferrer">
               <Image alt="Dribbble" src={dribbble} width={30} height={30} />
             </a>
           </div>

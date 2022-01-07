@@ -8,9 +8,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } else if (req.method === "POST") {
     const { comment } = req.body;
     const { nama } = req.body;
-    const date = toString(Date.now());
+    const date = Date.now();
     const newComment = {
-      id: date ,
+      id: '' + date ,
       name: nama + '',
       text: comment + '',
     };

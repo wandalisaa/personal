@@ -2,10 +2,15 @@ import {
   Form, Button, Row, Card,
 } from 'react-bootstrap';
 import { useState } from 'react';
+// @ts-ignore
 import Layout from './layout.tsx';
 
-export default function message(props) {
+interface messageProps{
+  dataComment: [];
+}
+export default function message(props: messageProps) {
   const { dataComment } = props;
+  const [ data, setstate] = useState(dataComment as any[]);
   const [comment, setComment] = useState('');
   const [nama, setName] = useState('');
 
@@ -26,7 +31,7 @@ export default function message(props) {
         <Row>
           <div className="col-lg-6 col-sm-12">
             <span>What people say about me</span>
-            {dataComment.map((komentar) => (
+            {data.map((komentar) => (
               <Card className="box" key={komentar.id}>
                 <Card.Body>
                   <Card.Subtitle className="mb-2 text-muted">

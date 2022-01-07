@@ -1,13 +1,11 @@
-import Layout from "./layout.tsx";
-import Content from "./content";
+// @ts-ignore
+import Layout from './layout.tsx';
 
-export default function goals(props) {
+export default function goals() {
   return (
     <Layout pageTitle="Goals">
-      {" "}
-      <div>
-        
-      </div>
+      {' '}
+      <div />
     </Layout>
   );
 }
