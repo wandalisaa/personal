@@ -2,16 +2,9 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { comments } from "../../../data/comment";
 
-type Data = {
-  id: number;
-  name: string;
-  text: string;
-  time: string;
-};
-
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>
+  res: NextApiResponse
 ) {
   if (req.method === "GET") {
     res.status(200).json(comments);
