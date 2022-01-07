@@ -12,10 +12,10 @@ export default function handler(
     const { comment } = req.body;
     const { nama } = req.body;
     const newComment = {
-      id: Date.now(),
+      id: toString(Date.now()),
       name: nama,
       text: comment,
-      time: Date.now(),
+      time: toString(Date.now()),
     };
     comments.push(newComment);
     res.status(201).json(newComment);
