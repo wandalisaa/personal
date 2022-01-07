@@ -13,7 +13,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       id: toString(date),
       name: nama + '',
       text: comment + '',
-      time: toString(date),
     };
     comments.push(newComment);
     res.status(201).json(newComment);
