@@ -1,0 +1,148 @@
+{
+    "portofolio": [
+        {
+            "id": 0,
+            "title": "Recreate Elearning USU mobile App",
+            "types": "UI / UX",
+            "photo": [
+                {
+                    "url": "/elearning.png",
+                    "alt": "mockup"
+                },
+                {
+                    "url": "/elearning2.png",
+                    "alt": "mockup"
+                },
+                {
+                    "url": "/elearning1.png",
+                    "alt": "mockup"
+                }
+            ],
+            "event": "Design Interaction Practice 2021",
+            "desc": "Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        },
+        {
+            "id": "1",
+            "title": "Branding PMB TI USU",
+            "types": "Branding",
+            "photo": [
+                {
+                    "url": "/pmb.jpg",
+                    "alt": "mockup"
+                },
+                {
+                    "url": "/pmb2.jpg",
+                    "alt": "mockup"
+                }
+            ],
+            "event": "PMB TI USU 2021",
+            "desc": "Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        },
+        {
+            "id": "3",
+            "title": "Packaging Renyirih",
+            "types": "Packaging",
+            "photo": [
+                {
+                    "url": "/renyirih.png",
+                    "alt": "mockup"
+                }
+            ],
+            "event": "Renyirih PKM 2021",
+            "desc": "Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        },{
+            "id": "2",
+            "title": "SpartaCord",
+            "types": "Branding",
+            "photo": [
+                {
+                    "url": "/sparta1.png",
+                    "alt": "sparta1"
+                },
+                {
+                    "url": "/sparta2.png",
+                    "alt": "sparta2"
+                }
+            ],
+            "event": "UMKM Medan",
+            "desc": "Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        },
+        {
+            "id": "4",
+            "title": "Microblog about Artificial Intelligence",
+            "types": "Social Media",
+            "photo": [
+                {
+                    "url": "/microblog-01.jpg",
+                    "alt": "microblog-01"
+                },
+                {
+                    "url": "/microblog-02.jpg",
+                    "alt": "microblog-02"
+                },
+                {
+                    "url": "/microblog-03.jpg",
+                    "alt": "microblog-03"
+                },
+                {
+                    "url": "/microblog-04.jpg",
+                    "alt": "microblog-04"
+                },
+                {
+                    "url": "/microblog-05.jpg",
+                    "alt": "microblog-05"
+                },
+                {
+                    "url": "/microblog-06.jpg",
+                    "alt": "microblog-06"
+                },
+                {
+                    "url": "/microblog-07.jpg",
+                    "alt": "microblog-07"
+                },
+                {
+                    "url": "/microblog-08.jpg",
+                    "alt": "microblog-08"
+                }
+            ],
+            "event": "Himatif USU Competition",
+            "desc": "Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        }
+    ],
+    "experiences": [
+        {
+          "id": 0,
+          "photo": "/itlg.png",
+          "title": "IT USU Laboratory Group Assistant",
+          "desc": "Responsible for teaching more than 40 students about web programming in 12 meetings",
+          "place": "ITLG USU"
+        },
+        {
+          "id": 1,
+          "photo": "/digitalskola.JPG",
+          "title": "Independent Study as Data Scientist",
+          "desc": "Be part of 100 students who take part in studi independent kampus merdeka at digital skola as data scientist",
+          "place": "Studi Independen Kampus Merdeka"
+        }
+      ],
+    "comments": [
+        {
+          "id": "0",
+          "name": "Lolipop Basi",
+          "text": "Nonton drakor hobinya , ahjussi kesukaan nya",
+          "time": "12/12/2021 12:23:00"
+        },
+        {
+          "id": "1",
+          "name": "Unicorn Borjong",
+          "text": "Saya lelah",
+          "time": "12/12/2021 12:23:00"
+        },
+        {
+          "id": "3",
+          "name": "Miayam",
+          "text": "Bukan untuk ditiru",
+          "time": "12/12/2021 12:23:00"
+        }
+      ]
+}

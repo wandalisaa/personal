@@ -62,13 +62,13 @@ export default function layout(props) {
               Its my personal website that i build using react js and next js .
             </p>
             <p>See more about me on my social media .</p>
-            <a href="#" className="icon">
+            <a target="_blank" href="https://www.linkedin.com/in/wanda-khalishah-898138209/" className="icon">
               <Image alt="LinkedIn" src={linkedin} width={30} height={30} />
             </a>
-            <a href="#" className="icon">
+            <a target="_blank" href="https://github.com/wandalisaa" className="icon">
               <Image alt="Github" src={github} width={30} height={30} />
             </a>
-            <a href="#" className="icon">
+            <a target="_blank" href="https://dribbble.com/Wanda_Khalishah" className="icon">
               <Image alt="Dribbble" src={dribbble} width={30} height={30} />
             </a>
           </div>

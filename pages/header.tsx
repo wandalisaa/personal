@@ -30,8 +30,8 @@ export default function header() {
               </Link>
             </Nav>
             <Nav>
-              <Link scroll={false} href="/goals">
-                <a className={router.pathname == '/goals' ? 'nav-link active' : 'nav-link'}>My Goals</a>
+              <Link scroll={false} href="/contact">
+                <a className={router.pathname == '/contact' ? 'nav-link active' : 'nav-link'}>My Contact</a>
               </Link>
               <Link scroll={false} href="/message">
                 <a className={router.pathname == '/message' ? 'nav-link active' : 'nav-link'}>Message</a>

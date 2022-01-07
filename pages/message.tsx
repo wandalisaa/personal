@@ -1,43 +1,86 @@
-import { Form, Button, Row, Card } from "react-bootstrap";
-import Layout from "./layout.tsx";
+import {
+  Form, Button, Row, Card,
+} from 'react-bootstrap';
+import { useState } from 'react';
+import Layout from './layout.tsx';
 
-export default function message() {
+export default function message(props) {
+  const { dataComment } = props;
+  const [comment, setComment] = useState('');
+  const [nama, setName] = useState('');
+
+  const submitComment = async () => {
+    const response = await fetch('/api/comment', {
+      method: 'POST',
+      body: JSON.stringify({ comment , nama }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    const data = await response.json();
+    console.log(data);
+  };
   return (
     <Layout pageTitle="Messages">
       <div className="messages">
         <Row>
           <div className="col-lg-6 col-sm-12">
+            <span>What people say about me</span>
+            {dataComment.map((komentar) => (
+              <Card className="box" key={komentar.id}>
+                <Card.Body>
+                  <Card.Subtitle className="mb-2 text-muted">
+                    {komentar.name}
+                  </Card.Subtitle>
+                  <Card.Text>{komentar.text}</Card.Text>
+                </Card.Body>
+              </Card>
+            ))}
+          </div>
+          <div className="col-lg-6 col-sm-12 order-first order-md-last">
             <Form>
               <Form.Group className="mb-3" controlId="formName">
-                <Form.Control type="text" placeholder="Enter your name" />
+                <Form.Control
+                  type="text"
+                  placeholder="Enter your name"
+                  value={nama}
+                  onChange={(e) => setName(e.target.value)}
+                />
               </Form.Group>
-
               <Form.Group className="mb-3" controlId="formText">
-                <Form.Control as="textarea" rows={3} />
+                <Form.Control
+                  as="textarea"
+                  rows={3}
+                  value={comment}
+                  onChange={(e) => setComment(e.target.value)}
+                />
                 <Form.Text className="text-muted">
                   Write what you think about me or some message for me
                 </Form.Text>
               </Form.Group>
-              <Button variant="primary" className="float-right" type="submit">
+              <Button
+                variant="primary"
+                className="float-right"
+                type="submit"
+                onClick={submitComment}
+              >
                 Submit
               </Button>
             </Form>
-          </div>
-          <div className="col-lg-6 col-sm-12">
-            <span>What people say about me</span>
-            <Card className="box">
-              <Card.Body>
-                <Card.Subtitle className="mb-2 text-muted">
-                  Unicorn Borjong
-                </Card.Subtitle>
-                <Card.Text>
-                  Such a nice and cheerful girl that i ever know
-                </Card.Text>
-              </Card.Body>
-            </Card>
           </div>
         </Row>
       </div>
     </Layout>
   );
+}
+
+export async function getServerSideProps() {
+  const res = await fetch('http://localhost:8080/api/comment');
+  const dataComment = await res.json();
+
+  return {
+    props: {
+      dataComment,
+    },
+  };
 }

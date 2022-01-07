@@ -384,9 +384,7 @@ background: #EF8EFC;
 }
 
 /* Messages */
-.messages{
-  height: 500px;
-}
+
 .messages .form-control{
   background-color: #f0f8ff00;
   border: 2px solid #ef8efc;
@@ -432,4 +430,55 @@ background: #EF8EFC;
   top: 484.36px;
   }
   
+  .experience .imgMain{
+    min-height: 170px !important;
+  }
+}
+
+/* Slide */
+.carousel-inner {
+  border-radius: 25px;
+}
+.portoDetail .title{
+  margin-top: 60px;
+  margin-bottom: 30px;
+
+}
+.portoDetail .badge{
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+.portoDetail .blockquote-footer{
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+.portoDetail .imgWrap{
+  width: 100%;
+    height: 500px;
+}
+.portoDetail .imgWrap .image{
+  object-position: top;
+}
+
+/* Experience */
+.experience .imgBg{
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  filter: brightness(0.2) blur(10px) !important;
+}
+.experience .carousel-item{
+  height: 500px;
+}
+.experience .imgMain{
+  min-width: 80%;
+  min-height: 300px;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  background-position: center;
+  background-size: cover;
 }
