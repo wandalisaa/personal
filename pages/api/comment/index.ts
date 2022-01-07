@@ -11,8 +11,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const date = Date.now();
     const newComment = {
       id: toString(date),
-      name: nama,
-      text: comment,
+      name: nama + '',
+      text: comment + '',
       time: toString(date),
     };
     comments.push(newComment);
