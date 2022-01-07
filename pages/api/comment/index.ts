@@ -10,7 +10,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { nama } = req.body;
     const date = Date.now();
     const newComment = {
-      id: toString(date),
+      id: date,
       name: nama + '',
       text: comment + '',
     };
