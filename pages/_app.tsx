@@ -7,7 +7,6 @@ import { useEffect } from 'react';
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
-    import('bootstrap/dist/js/bootstrap');
     document.title = "WandaWorld | Portofolio Website";
   }, []);
 
