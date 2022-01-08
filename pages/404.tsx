@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 /* eslint linebreak-style: ["error", "windows"] */
