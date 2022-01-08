@@ -80,7 +80,7 @@ export default function message(props: messageProps) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch('http://localhost:3005/api/comment');
+  const res = await fetch('https://wandaworld.vercel.app/api/comment');
   const dataComment = await res.json();
 
   return {
