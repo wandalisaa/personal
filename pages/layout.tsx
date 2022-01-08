@@ -44,7 +44,7 @@ export default function layout(props: LayoutProps) {
         <div className="ellipse10" />
         <div className="ellipse11" />
         <div className="ellipse12" />
-        <Button className={styles.contactBtn} variant="dark">
+        <Button className={styles.contactBtn} variant="dark" href="mailto:wandakhalishah076@gmail.com">
           Contact Me
         </Button>
         <Row>

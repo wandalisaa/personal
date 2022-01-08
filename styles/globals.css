@@ -89,7 +89,7 @@ filter: blur(140px);
 /* Ellipse 7 */
 
 .ellipse7{
-position: absolute;
+position: fixed;
 width: 259.18px;
 height: 250.98px;
 left: 234.37px;
@@ -102,7 +102,7 @@ filter: blur(75px);
 /* Ellipse 4 */
 
 .ellipse8{
-position: absolute;
+position: fixed;
 width: 352.17px;
 height: 293.81px;
 left: 141.38px;
@@ -115,7 +115,7 @@ filter: blur(146px);
 /* Ellipse 6 */
 
 .ellipse6{
-position: absolute;
+position: fixed;
 width: 222.58px;
 height: 206.49px;
 left: 235.05px;
