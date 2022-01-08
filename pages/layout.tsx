@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import {
   Container,
   Row,
@@ -60,10 +61,10 @@ export default function layout(props: LayoutProps) {
             </div>
           </div>
           <div className="col-lg-8 col-sm-12 overview order-first order-md-last">
-            <h1>Hi !  🤡🎉</h1>
+            <h1>Hello There !  🤡🎉</h1>
             <h1>Welcome to my page </h1>
             <p>
-              Its my personal website that i build using react js and next js .
+              I'm Wanda .
             </p>
             <p>See more about me on my social media .</p>
             <a target="_blank" href="https://www.linkedin.com/in/wanda-khalishah-898138209/" className="icon" rel="noreferrer">
