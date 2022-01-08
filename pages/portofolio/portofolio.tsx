@@ -1,15 +1,11 @@
-import { Card, Row } from "react-bootstrap";
-import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { prototype } from "module";
-import { porto } from "../../data/porto";
+/* eslint-disable no-unused-vars */
+import { Card, Row } from 'react-bootstrap';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
+import InfiniteScroll from 'react-infinite-scroll-component';
+import { useState } from 'react';
 // @ts-ignore
-import Layout from "../layout.tsx";
-import InfiniteScroll from "react-infinite-scroll-component";
-import { useState } from "react";
-
-/* eslint-disable linebreak-style */
+import Layout from '../layout.tsx';
 
 // effect shimmer for image loading
 const shimmer = (w: any, h: any) => `
@@ -26,13 +22,12 @@ const shimmer = (w: any, h: any) => `
   <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
 </svg>`;
 
-const toBase64 = (str: any) =>
-  typeof window === "undefined"
-    ? Buffer.from(str).toString("base64")
-    : window.btoa(str);
+const toBase64 = (str: any) => (typeof window === 'undefined'
+  ? Buffer.from(str).toString('base64')
+  : window.btoa(str));
 
 export async function getStaticProps() {
-  const res = await fetch("https://my-json-server.typicode.com/wandalisaa/myAPI/portofolio?_limit=3");
+  const res = await fetch('https://my-json-server.typicode.com/wandalisaa/myAPI/portofolio?_limit=3');
   const dataPortofolio = await res.json();
 
   return {
@@ -49,13 +44,13 @@ interface portoProps{
 export default function portofolio(props: portoProps) {
   const route = useRouter();
   const { dataPortofolio } = props;
-  const [ data, setstate] = useState(dataPortofolio as any[]);
+  const [data, setstate] = useState(dataPortofolio as any[]);
   const [posts, setPosts] = useState(data);
   const [hasMore, setHasMore] = useState(true);
 
   const getMorePost = async () => {
     const res = await fetch(
-      `https://my-json-server.typicode.com/wandalisaa/myAPI/portofolio?_start=${posts.length}&_limit=3`
+      `https://my-json-server.typicode.com/wandalisaa/myAPI/portofolio?_start=${posts.length}&_limit=3`,
     );
     const newPosts = await res.json();
     setPosts((post) => [...post, ...newPosts]);
@@ -67,38 +62,38 @@ export default function portofolio(props: portoProps) {
         <InfiniteScroll
           dataLength={posts.length}
           next={getMorePost}
-          loadMore={hasMore}
-          hasMore={true} 
+          hasMore={hasMore}
           className="row"
+          loader={<br />}
         >
-          {posts.map((portofolio) => (
-            <div className="col-lg-4 col-sm-12" key={portofolio.id}>
+          {posts.map((porto) => (
+            <div className="col-lg-4 col-sm-12" key={porto.id}>
               <Card>
                 <div className="bgWarp">
                   <Image
                     layout="fill"
                     objectFit="cover"
-                    src={portofolio.photo[0].url}
+                    src={porto.photo[0].url}
                     placeholder="blur"
                     quality={2}
                     blurDataURL={`data:image/svg+xml;base64,${toBase64(
-                      shimmer(700, 475)
+                      shimmer(700, 475),
                     )}`}
-                    alt={portofolio.title}
+                    alt={porto.title}
                   />
                 </div>
               </Card>
               <Card className="desc">
                 <Card.Body
-                  onClick={() => route.push(`/portofolio/${portofolio.id}`)}
+                  onClick={() => route.push(`/portofolio/${porto.id}`)}
                   className="click"
                 >
-                  <span>{portofolio.types}</span>
+                  <span>{porto.types}</span>
                   <blockquote className="blockquote mb-0">
-                    <p>{portofolio.title}</p>
+                    <p>{porto.title}</p>
                     <footer className="blockquote-footer">
-                      {" "}
-                      <cite title="Source Title">{portofolio.event}</cite>
+                      {' '}
+                      <cite title="Source Title">{porto.event}</cite>
                     </footer>
                   </blockquote>
                 </Card.Body>

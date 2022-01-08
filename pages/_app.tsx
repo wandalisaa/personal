@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
-    document.title = "WandaWorld | Portofolio Website";
+    document.title = 'WandaWorld | Portofolio Website';
   }, []);
 
   return <Component {...pageProps} />;

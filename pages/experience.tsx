@@ -1,8 +1,10 @@
+/* eslint-disable no-unused-vars */
+import { Carousel } from 'react-bootstrap';
+import Image from 'next/image';
 // @ts-ignore
-import Layout from "./layout.tsx";
-import { Carousel } from "react-bootstrap";
-import Image from "next/image";
-import { useState } from "react";
+import { useState } from 'react';
+// @ts-ignore
+import Layout from './layout.tsx';
 
 // effect shimmer for image loading
 const shimmer = (w: any, h: any) => `
@@ -19,13 +21,12 @@ const shimmer = (w: any, h: any) => `
   <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
 </svg>`;
 
-const toBase64 = (str: any) =>
-  typeof window === "undefined"
-    ? Buffer.from(str).toString("base64")
-    : window.btoa(str);
+const toBase64 = (str: any) => (typeof window === 'undefined'
+  ? Buffer.from(str).toString('base64')
+  : window.btoa(str));
 
 export async function getStaticProps() {
-  const res = await fetch("https://my-json-server.typicode.com/wandalisaa/myAPI/experiences");
+  const res = await fetch('https://my-json-server.typicode.com/wandalisaa/myAPI/experiences');
   const dataExperience = await res.json();
 
   return {
@@ -41,29 +42,28 @@ interface Props {
 
 export default function experience(props: Props) {
   const { dataExperience } = props;
-  const [ data, setstate] = useState(dataExperience as any[]);
+  const [data, setstate] = useState(dataExperience as any[]);
   return (
     <Layout pageTitle="Experiences">
-      <Carousel className="experience" fade >
-        {data.map((experience) => (
+      <Carousel className="experience" fade>
+        {data.map((ex) => (
           <Carousel.Item interval={3000}>
             <Image
               className="imgBg"
               layout="fill"
               objectFit="cover"
-              src={ experience.photo }
+              src={ex.photo}
               placeholder="blur"
               blurDataURL={`data:image/svg+xml;base64,${toBase64(
-                shimmer(700, 475)
+                shimmer(700, 475),
               )}`}
-              alt={experience.place}
+              alt={ex.place}
             />
             <Carousel.Caption>
-              <div className="imgMain" style={{backgroundImage: `url(${experience.photo})`}}>
-              </div>
-              <h3>{experience.title}</h3>
-              <p>{experience.desc}</p>
-              <footer className="blockquote-footer">{experience.place}</footer>
+              <div className="imgMain" style={{ backgroundImage: `url(${ex.photo})` }} />
+              <h3>{ex.title}</h3>
+              <p>{ex.desc}</p>
+              <footer className="blockquote-footer">{ex.place}</footer>
             </Carousel.Caption>
           </Carousel.Item>
         ))}

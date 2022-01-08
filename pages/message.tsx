@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {
   Form, Button, Row, Card,
 } from 'react-bootstrap';
@@ -10,20 +11,19 @@ interface messageProps{
 }
 export default function message(props: messageProps) {
   const { dataComment } = props;
-  const [ data, setstate] = useState(dataComment as any[]);
+  const [data, setstate] = useState(dataComment as any[]);
   const [comment, setComment] = useState('');
   const [nama, setName] = useState('');
 
   const submitComment = async () => {
     const response = await fetch('/api/comment', {
       method: 'POST',
-      body: JSON.stringify({ comment , nama }),
+      body: JSON.stringify({ comment, nama }),
       headers: {
         'Content-Type': 'application/json',
       },
     });
-    const data = await response.json();
-    console.log(data);
+    const addComment = await response.json();
   };
   return (
     <Layout pageTitle="Messages">
@@ -80,7 +80,7 @@ export default function message(props: messageProps) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch('http://localhost:8080/api/comment');
+  const res = await fetch('http://localhost:3005/api/comment');
   const dataComment = await res.json();
 
   return {

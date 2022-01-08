@@ -1,22 +1,17 @@
-import { useRouter } from "next/router";
-import { useContext } from "react";
-import Image from "next/image";
+/* eslint-disable no-unused-vars */
+import { useRouter } from 'next/router';
+import { useContext, useState } from 'react';
+import Image from 'next/image';
 import {
-  Container,
-  Nav,
-  NavDropdown,
   Row,
-  Button,
-  Card,
   Badge,
   Carousel,
-} from "react-bootstrap";
-// @ts-ignore
-import Layout from "../layout.tsx";
-import { useState } from 'react';
+} from 'react-bootstrap';
+// @ts-ignoreS
+import Layout from '../layout.tsx';
 
 interface portoDetailProps {
-  portofolio: Object;
+  portofolio: any;
 }
 
 const shimmer = (w:any, h:any) => `
@@ -33,31 +28,30 @@ const shimmer = (w:any, h:any) => `
   <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
 </svg>`;
 
-const toBase64 = (str: any) =>
-  typeof window === "undefined"
-    ? Buffer.from(str).toString("base64")
-    : window.btoa(str);
+const toBase64 = (str: any) => (typeof window === 'undefined'
+  ? Buffer.from(str).toString('base64')
+  : window.btoa(str));
 
 export default function portoDetail(props: portoDetailProps) {
   const { portofolio } = props;
-  const [ data, setstate] = useState(portofolio);
+  const [data, setstate] = useState(portofolio);
   return (
     <Layout pageTitle="Portofolio">
       <Row className="portoDetail">
         <div className="col-lg-6 col-sm-12">
           <Carousel fade interval={3000} variant="dark">
-            {data.photo.map((p) => (
+            {data.photo.map((picture:any) => (
               <Carousel.Item>
                 <div className="imgWrap">
                   <Image
                     className="image"
                     layout="fill"
                     objectFit="contain"
-                    src={p.url}
-                    alt={p.title}
+                    src={picture.url}
+                    alt={picture.alt}
                     placeholder="blur"
                     blurDataURL={`data:image/svg+xml;base64,${toBase64(
-                      shimmer(700, 475)
+                      shimmer(700, 475),
                     )}`}
                   />
                 </div>
@@ -69,7 +63,8 @@ export default function portoDetail(props: portoDetailProps) {
           <h3 className="title w-50">{portofolio.title}</h3>
           <Badge pill bg="primary">
             {portofolio.type}
-          </Badge>{" "}
+          </Badge>
+          {' '}
           <p>{portofolio.desc}</p>
           <footer className="blockquote-footer">{portofolio.event}</footer>
         </div>
@@ -79,10 +74,10 @@ export default function portoDetail(props: portoDetailProps) {
 }
 
 export async function getStaticPaths() {
-  const res = await fetch("https://my-json-server.typicode.com/wandalisaa/myAPI/portofolio");
+  const res = await fetch('https://my-json-server.typicode.com/wandalisaa/myAPI/portofolio');
   const dataPortofolio = await res.json();
 
-  const paths = dataPortofolio.map((portos) => ({
+  const paths = dataPortofolio.map((portos: any) => ({
     params: {
       id: `${portos.id}`,
     },
@@ -93,7 +88,7 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps(context: any) {
   const { id } = context.params;
   const res = await fetch(`https://my-json-server.typicode.com/wandalisaa/myAPI/portofolio/${id}`);
   const portofolio = await res.json();

@@ -1,6 +1,9 @@
+/* eslint-disable max-len */
+/* eslint-disable import/no-unresolved */
+/* eslint-disable import/extensions */
+/* eslint-disable no-unused-vars */
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { portofolio } from '../../../data/porto';
-
 
 export default function portofolioHandler({ query: { id } }: { query: {id: string}}, res: NextApiResponse) {
   const filtered = portofolio.filter((p) => p.id === id);

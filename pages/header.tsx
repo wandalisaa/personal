@@ -1,12 +1,10 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable eqeqeq */
 import Link from 'next/link';
 import {
   Navbar,
   Container,
   Nav,
-  NavDropdown,
-  Row,
-  Button,
-  Card,
 } from 'react-bootstrap';
 import { useRouter } from 'next/router';
 
