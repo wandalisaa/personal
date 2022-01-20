@@ -2,7 +2,7 @@ import { Row } from 'react-bootstrap';
 import Image from 'next/image';
 // @ts-ignore
 import Layout from './layout.tsx';
-import me from '../public/pasfoto.png';
+import me from '../public/pasfoto_square.png';
 
 export default function goals() {
   return (
