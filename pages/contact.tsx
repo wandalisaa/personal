@@ -1,6 +1,6 @@
-// @ts-ignore
 import { Row } from 'react-bootstrap';
 import Image from 'next/image';
+// @ts-ignore
 import Layout from './layout.tsx';
 import me from '../public/mee.jpg';
 
