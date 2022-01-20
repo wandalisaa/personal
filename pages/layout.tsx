@@ -62,11 +62,11 @@ export default function layout(props: LayoutProps) {
           </div>
           <div className="col-lg-8 col-sm-12 overview order-first order-md-last">
             <h1>Hello There !  🤡🎉</h1>
-            <h1>Welcome to my page </h1>
+            <h1>Selamat datang </h1>
             <p>
-              I'm Wanda .
+              di website personal portofolio wanda khalishah
             </p>
-            <p>See more about me on my social media .</p>
+            <p>Lihat lebih banyak tentang saya di</p>
             <a target="_blank" href="https://www.linkedin.com/in/wanda-khalishah-898138209/" className="icon" rel="noreferrer">
               <Image alt="LinkedIn" src={linkedin} width={30} height={30} />
             </a>

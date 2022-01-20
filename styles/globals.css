@@ -482,3 +482,16 @@ background: #EF8EFC;
   background-position: center;
   background-size: cover;
 }
+/* Contact */
+.profile .photo{
+  border-radius: 50%;
+}
+.profile{
+  text-align-last: center;
+}
+.contact p{
+  color: #8d8d8d;
+}
+.contact .col-lg-6{
+  place-self: center;
+}
