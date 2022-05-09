@@ -40,7 +40,7 @@ const Home: NextPage = () => {
 , student at Universitas Sumatera Utara majoring in information technology. I am excited to learn new things, especially in the field of
 {" "}
             <div className="gradient">
-              <p>desain dan Teknologi .</p>
+              <p>Design and Technology .</p>
             </div>
           </h5>
           <h5>Things i like most</h5>
