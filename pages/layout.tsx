@@ -17,6 +17,7 @@ import me from '../styles/asset/me.png';
 import dribbble from '../styles/asset/dribbble.png';
 import github from '../styles/asset/github.png';
 import linkedin from '../styles/asset/linkedin.png';
+import 'animate.css';
 
 interface LayoutProps {
   children : ReactNode;
@@ -35,16 +36,16 @@ export default function layout(props: LayoutProps) {
         </title>
       </Head>
       <Container className="text-white">
-        <div className="ellipse1" />
-        <div className="ellipse2" />
-        <div className="ellipse3" />
-        <div className="ellipse6" />
-        <div className="ellipse7" />
-        <div className="ellipse8" />
-        <div className="ellipse9" />
-        <div className="ellipse10" />
-        <div className="ellipse11" />
-        <div className="ellipse12" />
+        <div className="ellipse1 animate__animated animate__bounce animate__infinite" />
+        <div className="ellipse2  " />
+        <div className="ellipse3  " />
+        <div className="ellipse6  " />
+        <div className="ellipse7 " />
+        <div className="ellipse8  " />
+        <div className="ellipse9 " />
+        <div className="ellipse10 " />
+        <div className="ellipse11  " />
+        <div className="ellipse12  " />
         <Button className={styles.contactBtn} variant="dark" href="mailto:wandakhalishah076@gmail.com">
           Contact Me
         </Button>
@@ -62,11 +63,11 @@ export default function layout(props: LayoutProps) {
           </div>
           <div className="col-lg-8 col-sm-12 overview order-first order-md-last">
             <h1>Hello There !  🤡🎉</h1>
-            <h1>Selamat datang </h1>
+            <h1>Nice to see you here </h1>
             <p>
-              di website personal portofolio wanda khalishah
+              Its wanda's personal website
             </p>
-            <p>Lihat lebih banyak tentang saya di</p>
+            <p>Connect with me on my social media</p>
             <a target="_blank" href="https://www.linkedin.com/in/wanda-khalishah-898138209/" className="icon" rel="noreferrer">
               <Image alt="LinkedIn" src={linkedin} width={30} height={30} />
             </a>

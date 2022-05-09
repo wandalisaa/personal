@@ -33,17 +33,17 @@ const Home: NextPage = () => {
       <Row className="aboutMe">
         <div className="col-lg-6 col-sm-12">
           <h5 className="w-75">
-            Nama saya
+            I'm
 {' '}
 <b>Wanda Khalishah</b>
 {' '}
-, seorang mahasiswa di universitas sumatera utara jurusan teknologi informasi . Saya sangat senang membelajari hal baru terutama di bidang
+, student at Universitas Sumatera Utara majoring in information technology. I am excited to learn new things, especially in the field of
 {" "}
             <div className="gradient">
               <p>desain dan Teknologi .</p>
             </div>
           </h5>
-          <h5>Hal yang disukai</h5>
+          <h5>Things i like most</h5>
           <h4>
             <Badge bg="primary">🎨 Art</Badge>
             <Badge bg="primary">🎬 Kdrama</Badge>
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
           </h4>
         </div>
         <div className="col-lg-6 col-sm-12">
-          <h5>Pendidikan saya</h5>
+          <h5>Education</h5>
           <ul className="timeline">
             <li className="event">
               <h6>2013 - 2016</h6>
@@ -63,7 +63,7 @@ const Home: NextPage = () => {
             </li>
             <li className="event" id="date">
               <h6>2019 - Now</h6>
-              <p>TECHNOLOGY INFORMATION , USU</p>
+              <p> INFORMATION TECHNOLOGY , USU</p>
             </li>
           </ul>
         </div>
