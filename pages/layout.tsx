@@ -1,9 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import {
-  Container,
-  Row,
-  Button,
-  Card,
+  Container, Row, Button, Card,
 } from 'react-bootstrap';
 import Image from 'next/image';
 import Head from 'next/head';
@@ -20,7 +17,7 @@ import linkedin from '../styles/asset/linkedin.png';
 import 'animate.css';
 
 interface LayoutProps {
-  children : ReactNode;
+  children: ReactNode;
   pageTitle: string;
 }
 
@@ -46,7 +43,14 @@ export default function layout(props: LayoutProps) {
         <div className="ellipse10 " />
         <div className="ellipse11  " />
         <div className="ellipse12  " />
-        <Button className={styles.contactBtn} variant="dark" href="mailto:wandakhalishah076@gmail.com">
+        <div id="stars" />
+        <div id="stars2" />
+        <div id="stars3" />
+        <Button
+          className={styles.contactBtn}
+          variant="dark"
+          href="mailto:wandakhalishah076@gmail.com"
+        >
           Contact Me
         </Button>
         <Row>
@@ -62,19 +66,32 @@ export default function layout(props: LayoutProps) {
             </div>
           </div>
           <div className="col-lg-8 col-sm-12 overview order-first order-md-last">
-            <h1>Hello There !  🤡🎉</h1>
+            <h1>Hello There ! 🤡🎉</h1>
             <h1>Nice to see you here </h1>
-            <p>
-              Its wanda's personal website
-            </p>
+            <p>Its wanda's personal website</p>
             <p>Connect with me on my social media</p>
-            <a target="_blank" href="https://www.linkedin.com/in/wanda-khalishah-898138209/" className="icon" rel="noreferrer">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/wanda-khalishah-898138209/"
+              className="icon"
+              rel="noreferrer"
+            >
               <Image alt="LinkedIn" src={linkedin} width={30} height={30} />
             </a>
-            <a target="_blank" href="https://github.com/wandalisaa" className="icon" rel="noreferrer">
+            <a
+              target="_blank"
+              href="https://github.com/wandalisaa"
+              className="icon"
+              rel="noreferrer"
+            >
               <Image alt="Github" src={github} width={30} height={30} />
             </a>
-            <a target="_blank" href="https://dribbble.com/Wanda_Khalishah" className="icon" rel="noreferrer">
+            <a
+              target="_blank"
+              href="https://dribbble.com/Wanda_Khalishah"
+              className="icon"
+              rel="noreferrer"
+            >
               <Image alt="Dribbble" src={dribbble} width={30} height={30} />
             </a>
           </div>
