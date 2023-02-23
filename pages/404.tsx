@@ -1,7 +1,7 @@
 /* eslint-disable linebreak-style */
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-/* eslint linebreak-style: ["error", "windows"] */
+/* eslint-disable linebreak-style */
 export default function Custom404() {
   const router = useRouter();
   useEffect(() => {

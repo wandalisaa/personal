@@ -15,7 +15,7 @@
 
 /* eslint-disable react/no-unescaped-entities */
 
-/* eslint linebreak-style: ["error", "windows"] */
+/* eslint-disable linebreak-style */
 
 import type { NextPage } from "next";
 
